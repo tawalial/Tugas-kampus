@@ -1,17 +1,17 @@
 // tugas-es6.mjs
 
 const transaksi = [
-  { id: 1, barang: "Beras", harga: 15000, qty: 2, kategori: "Makanan" },
-  { id: 2, barang: "Minyak Goreng", harga: 18000, qty: 1, kategori: "Makanan" },
-  { id: 3, barang: "Sabun", harga: 5000, qty: 3, kategori: "Kebutuhan Rumah" },
-  { id: 4, barang: "Gula", harga: 14000, qty: 2, kategori: "Makanan" },
-  { id: 5, barang: "Buku Tulis", harga: 4000, qty: 5, kategori: "Alat Tulis" },
-  { id: 6, barang: "Kopi", harga: 12000, qty: 2, kategori: "Makanan" }
+  { id: 1, barang: "kaos boxy", harga: 90000, qty: 2, kategori: "kaos" },
+  { id: 2, barang: "jeans pants", harga: 120000, qty: 1, kategori: "celana" },
+  { id: 3, barang: "jersey", harga: 100000, qty: 3, kategori: "Kaos" },
+  { id: 4, barang: "cargo", harga: 130000, qty: 2, kategori: "celana" },
+  { id: 5, barang: "jaket tracktop", harga: 200000, qty: 5, kategori: "jaket" },
+  { id: 6, barang: "kaos oversize", harga: 80000, qty: 2, kategori: "kaos" }
 ];
 
 // Filter kategori Makanan
-const transaksiMakanan = transaksi.filter(
-  ({ kategori }) => kategori === "Makanan"
+const transaksifasion = transaksi.filter(
+  ({ kategori }) => kategori === "kaos"
 );
 
 // Map untuk menghitung subtotal
@@ -31,7 +31,7 @@ const totalKeseluruhan = rincianSubtotal.reduce(
 );
 
 // Reduce untuk menghitung total makanan
-const totalMakanan = transaksiMakanan.reduce(
+const totalfasion = transaksifasion.reduce(
   (total, { harga, qty }) => total + harga * qty,
   0
 );
@@ -40,8 +40,8 @@ const totalMakanan = transaksiMakanan.reduce(
 console.log("=== SEMUA TRANSAKSI ===");
 console.log(rincianSubtotal);
 
-console.log("\n=== TRANSAKSI MAKANAN ===");
-console.log(transaksiMakanan);
+console.log("\n=== TRANSAKSI fasion ===");
+console.log(transaksifasion);
 
 console.log(
   "\nTotal seluruh transaksi: Rp" +
@@ -50,5 +50,5 @@ console.log(
 
 console.log(
   "Total kategori makanan: Rp" +
-  totalMakanan.toLocaleString("id-ID")
+  totalfasion.toLocaleString("id-ID")
 );
