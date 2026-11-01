@@ -49,6 +49,6 @@ console.log(
 );
 
 console.log(
-  "Total kategori makanan: Rp" +
+  "Total kategori fasion: Rp" +
   totalfasion.toLocaleString("id-ID")
 );
