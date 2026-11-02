@@ -1,7 +1,5 @@
 <div align="center">
 
-  <img src="https://yudharta.ac.id/wp-content/uploads/2018/06/d.jpg" alt="Universitas Yudharta Pasuruan" width="100%">
-
   <h1>📚 Repository Tugas Kuliah</h1>
   <h3>Teknik Informatika · Universitas Yudharta Pasuruan</h3>
 
