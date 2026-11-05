@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f1f5f9;
+  color: #1e293b;
+  min-height: 100vh;
+  padding: 24px 16px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+header h1 {
+  color: #2563eb;
+  margin-bottom: 8px;
+}
+
+header p, footer {
+  color: #64748b;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.search-box, .profile {
+  background: #fff;
+  padding: 22px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px #00000010;
+}
+
+.search-box label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: #2563eb;
+  color: white;
+  border: 0;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover { background: #1d4ed8; }
+button:disabled { background: #94a3b8; cursor: not-allowed; }
+
+#status {
+  text-align: center;
+  margin: 16px 0;
+  color: #475569;
+}
+
+.profile {
+  text-align: center;
+}
+
+.profile[hidden] { display: none; }
+
+.profile img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.profile h2 { margin-bottom: 8px; }
+.username { color: #64748b; margin-bottom: 15px; }
+.bio { margin-bottom: 20px; line-height: 1.6; }
+
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.stat {
+  background: #eff6ff;
+  padding: 14px;
+  border-radius: 10px;
+  min-width: 120px;
+}
+
+.stat strong {
+  display: block;
+  color: #2563eb;
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.profile-link {
+  display: inline-block;
+  background: #1e293b;
+  color: white;
+  padding: 12px 20px;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+.profile-link:hover { background: #334155; }
+
+footer {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 14px;
+}
+
+@media (max-width: 420px) {
+  .stats { gap: 8px; }
+  .stat { min-width: 95px; padding: 12px 8px; }
+}
