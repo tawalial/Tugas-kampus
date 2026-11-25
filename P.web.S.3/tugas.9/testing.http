@@ -1,0 +1,39 @@
+@host = http://localhost:8787
+
+### 1. Cek status API
+GET {{host}}/
+
+### 2. Ambil semua daftar tugas
+GET {{host}}/tasks
+
+### 3. Filter tugas berdasarkan status selesai (opsional)
+GET {{host}}/tasks?completed=false
+
+### 4. Ambil detail tugas berdasarkan ID
+GET {{host}}/tasks/102
+
+### 5. Tambah tugas baru
+POST {{host}}/tasks
+Content-Type: application/json
+
+{
+  "title": "Mengerjakan praktikum REST API Hono",
+  "category": "Pemrograman Web",
+  "completed": false
+}
+
+### 6. Ubah data tugas (PUT)
+PUT {{host}}/tasks/102
+Content-Type: application/json
+
+{
+  "title": "Membuat laporan praktikum jaringan",
+  "category": "Jaringan Komputer",
+  "completed": true
+}
+
+### 7. Tandai tugas selesai / belum selesai (PATCH)
+PATCH {{host}}/tasks/101/toggle
+
+### 8. Hapus tugas berdasarkan ID
+DELETE {{host}}/tasks/104
